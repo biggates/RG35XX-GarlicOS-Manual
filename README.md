@@ -17,3 +17,7 @@ Garlic OS 的文件内容可以从 [Black-Seraph 的 Patreon 页面](https://www
 - 可能包含 Black-Seraph 原帖中的一些翻译内容
 - 不会存放 Garlic OS 的文件内容
 - 不负责解答问题
+
+## 参考资料
+
+- [RG35XX Starter Guide by Retro Game Corps](https://retrogamecorps.com/2023/01/03/anbernic-rg35xx-starter-guide/)
