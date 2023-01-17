@@ -25,6 +25,10 @@ Garlic OS 的文件内容可以从 [Black-Seraph 的 Patreon 页面](https://www
 - [如何安装 Garlic OS (Windows) (中文)](./installation.windows.zh_CN.md)
 - [分区信息](./partitions.zh_CN.md)
 
+## 其他资源
+
+- [一些 RG35XX 资源下载 (百度网盘)](https://pan.baidu.com/s/16jbUh6etHZXScZ_UE114Jg?pwd=35xx)
+
 ## 参考资料
 
 - [RG35XX Starter Guide by Retro Game Corps](https://retrogamecorps.com/2023/01/03/anbernic-rg35xx-starter-guide/)
