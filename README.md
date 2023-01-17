@@ -6,8 +6,8 @@ Garlic OS 的文件内容可以从 [Black-Seraph 的 Patreon 页面](https://www
 
 文件内容：
 
-- CopyPasteOnTopOfStock.7z 中的 `misc`, `ROMS`, `BIOS` 等文件夹直接复制到官方镜像的对应分区中
-- MicroSDCardImage.7z 是整个 TF 卡的镜像 (garlic.img), 建议使用 [Balena Etcher](https://www.balena.io/etcher/) 还原到 TF 卡。
+- `CopyPasteOnTopOfStock.7z` 中的 `misc`, `ROMS`, `BIOS` 等文件夹直接复制到官方镜像的对应分区中，用于升级。
+- `MicroSDCardImage.7z` 是整个 TF 卡的镜像 (`garlic.img`), 建议使用 [balenaEtcher](https://www.balena.io/etcher/) 还原到 TF 卡。
 
 建议将 ROM 和存档放在 TF2 中，这样换机和维护都比较方便。
 
@@ -17,6 +17,13 @@ Garlic OS 的文件内容可以从 [Black-Seraph 的 Patreon 页面](https://www
 - 可能包含 Black-Seraph 原帖中的一些翻译内容
 - 不会存放 Garlic OS 的文件内容
 - 不负责解答问题
+
+## 目录
+
+- [Garlic OS 更新记录 (中文)](./changelog.en_US.md)
+  - [Garlic OS 更新记录 (原文转载)](./changelog.en_US.md)
+- [如何安装 Garlic OS (Windows) (中文)](./installation.windows.zh_CN.md)
+- [分区信息](./partitions.zh_CN.md)
 
 ## 参考资料
 

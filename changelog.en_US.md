@@ -2,6 +2,12 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 16. January 2023
+
+- Nearest-point scaler is now dual-threaded (pinned to core 3 & 4)
+- Semi-linear (Bresenham) scaler is now dual-threaded (pinned to core 3 & 4)
+- Audio synchronization was disabled (this helps with stuttering on some cores)
+
 ## 14. January 2023
 
 - Transparent game art should now render properly

@@ -1,4 +1,4 @@
-# 如何安装 (Windows)
+# 如何安装 Garlic OS (Windows)
 
 以下内容以 Windows 11 为例介绍如何安装 Garlic OS 。
 
@@ -6,11 +6,23 @@
 
 ### 硬件
 
+- 安装了 Windows 的电脑
+- TF 卡 1 至 2 张
+  - 如果经常折腾系统，建议使用两张卡，TF1 仅存放系统，用一张 4 GB 的就够了 (目前能买到的最小的 TF 卡似乎是 16 GB 的)；TF2 存放 ROMS ，能放下所有要玩的游戏就行。
+  - 如果懒得折腾系统，那么只用一张 TF 卡也是可行的。
+- TF 卡的读卡器
+
 ### 软件
 
-- 7-zip, 建议可以安装。
-- DiskGenius, 如本文使用的是 `DGEngSetup5461441.exe` ，需要安装。
-- Balena Etcher, 如本文使用的是 `balenaEtcher-Portable-1.13.1.exe` 不需要安装。如果下载了安装版则需要安装。
+- [7-zip](http://7-zip.org/) 用于解压 Garlic OS 发布的 `.7z` 格式的压缩文件, 轻巧的解压缩软件，建议安装。
+- [balenaEtcher](https://www.balena.io/etcher/), 用于将 `.img` 文件写入 TF 卡。如本文使用的是 `balenaEtcher-Portable-1.13.1.exe` 不需要安装。
+- [DiskGenius 中国版](https://www.diskgenius.cn/), 用于调整 ROMS 分区大小。如本文使用的是 `DG5461441_x64.zip` ，不需要安装，解压即可使用。
+  - 如果使用两张 TF 卡，就不需要使用该软件。
+  - ROMS 分区默认是 3.16 GiB ，如果空间够用的话，也可以不用该软件。
+  - 使用中国版的原因是，中国版不用安装就可以用。
+- [guiformat.exe](http://ridgecrop.co.uk/index.htm?guiformat.htm) 用于格式化大于 32 GiB 的 ROMS 分区。注意在该页面中点击软件截图就可以下载，没有独立的下载按钮或链接。
+  - 注意: 仅当存放 ROMS 的分区超过 32 GiB，才需要该工具。
+  - 注意: 这不是一个无损调整的工具。
 
 ### Garlic OS
 
@@ -20,22 +32,22 @@
 
 1. 将 `RG35XX-Garlic-MicroSDCardImage.7z` 解压，得到 `garlic.img`
 
-### 2. 烧录 SD 卡
+### 2. 烧录 TF 卡
 
-1. 打开 BalenaEtcher , 选择 "从文件烧录", 选择刚刚解压出来的 `garlic.img` 文件
+1. 打开 balenaEtcher , 选择 "从文件烧录", 选择刚刚解压出来的 `garlic.img` 文件
 
   ![](./images/balena_etcher_step_1.png)
 
-2. 把 SD 卡插入读卡器, 或插入电脑。
-3. 在 BalenaEtcher 中点击 "选择目标磁盘" , 选择要安装 Garlic OS 的 SD 卡 (注意别选错了!)
+2. 把 TF 卡插入读卡器, 或插入电脑。
+3. 在 balenaEtcher 中点击 "选择目标磁盘" , 选择要安装 Garlic OS 的 TF 卡 (注意别选错了!)
 
   ![](./images/balena_etcher_step_2.png)
 
-4. 在 BalenaEtcher 中确认好信息之后，点击 "现在烧录!"。在这一过程中会触发 UAC 提示，确认即可。
+4. 在 balenaEtcher 中确认好信息之后，点击 "现在烧录!"。在这一过程中会触发 UAC 提示，确认即可。
 
   ![](./images/balena_etcher_step_3.png)
 
-5. 耐心等待 BalenaEtcher 烧录完成。
+5. 耐心等待 balenaEtcher 烧录完成。
 
   注: 在烧录过程中显示的广告可能会有所不同，这不影响烧录的结果。
 
@@ -46,9 +58,13 @@
   注: 烧录完成后，Windows 可能会提示 XX 分区需要格式化。请务必忽略这些提示。
   注: 如果烧录失败，可以重来一次。
 
-  烧录成功之后就可以关闭 BalenaEtcher 了。
+  烧录成功之后就可以关闭 balenaEtcher 了。
 
-### 3. 调整分区表
+6. 如果要使用两张 TF 卡，请将 ROMS 分区中的 `ROMS` 文件夹先复制到本地硬盘，以供后续使用。
+
+### 3. 扩大 ROMS 分区
+
+`garlic.img` 烧录出来的磁盘是 4 GB 的，其中 ROMS 分区只有 3.2 GB 。如果需要用这张卡上的 ROMS 分区，那么就可以使用 DiskGenus 工具将其扩大。例如在这里使用的是一张 64 GB 的 TF 卡。
 
 1. 打开 DiskGenius, 可以看到新烧录的 SD 卡中的分区信息如下所示:
 
@@ -79,20 +95,40 @@
 注: 这一节描述的内容仅适用于新卡。如果你已经准备好了 ROMS ，那么就不需要按此节进行操作。
 
 
-1. 将需要操作的 SD2 插入电脑
-2. 以管理员身份打开 FAT32 Format 程序，选中正确的 SD 卡后，将 `Volume label` 设置为 `ROMS`，选择 "Start" 并确认。
+1. 将需要操作的 TF2 卡插入电脑
+2. 以管理员身份打开 FAT32 Format 程序，选中正确的 TF 卡后，将 `Volume label` 设置为 `ROMS`，选择 "Start" 并确认。
 
   ![](./images/FAT32Format_step_1.png)
 
-  注: 在这一步中如果反复出现文件被占用的操作，可以先用 Windows 把 SD2 格式化一遍，格式化成 NTFS 或者 exFAT 都无所谓。
+  注: 在这一步中如果反复出现文件被占用的提示，可以先用 Windows 把 TF2 格式化一遍，格式化成 NTFS 或者 exFAT 都无所谓。
 
 3. 格式化完成
 
   ![](./images/FAT32Format_step_2.png)
 
-4. 把 Roms 中的全部文件夹复制进 SD2 中。
+4. 把之前备份出来的 Roms 中的全部文件夹复制进 TF2 的根目录中。
 
   ![](./images/ROMS_folders.png)
 
 ## 升级 Garlic OS
 
+升级 Garlic OS 的过程如下:
+
+1. 下载新的 Garlic OS 文件，这里只需要使用 `RG35XX-Garlic-CopyPasteOnTopOfStock.7z` 即可
+2. 解压该文件，得到 `misc`, `ROMS` 两个目录和 `README.txt` 文件。
+
+  ![](./images/upgrade_zip_content.png)
+
+  为了避免混淆，下面将这几个文件夹称为 **升级文件** 。
+
+3. 将 TF1 插入电脑，把需要备份的信息备份好
+
+  - 最有价值的应该是存档
+  - 其次应该是一些配置文件
+
+4. 打开 TF1 的 `misc` 分区，将 **升级文件** 中的 `misc` 文件夹中的同名文件复制进去，覆盖同名文件
+5. 打开 TF1 的 `ROMS` 分区，将 **升级文件** 中的 `ROMS` 文件夹中的 `BIOS`, `CFW` 和 `Roms` 复制进去，覆盖同名文件
+
+  - `Roms` 下一般都是空文件夹，因此不会造成什么副作用。
+
+6. 如果使用了 TF2 ，那么也要将 **升级文件** 中的 `ROMS` 文件夹中的 `Roms` 文件夹内的各个文件夹复制到 TF2 卡的对应位置。
