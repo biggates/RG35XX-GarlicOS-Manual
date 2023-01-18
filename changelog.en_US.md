@@ -2,6 +2,16 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 17. January 2023
+
+- Set block_sram_overwrite = "true" to increase savestate stability
+- Changing the savestate slot in the quick menu no longer crashes RetroArch
+- Fixed transparent game art (for real now)
+- The GarlicOS main menu is now double-buffered (less tearing on fast scroll)
+- Recompiled dosbox_pure libretro core in the hopes of addressing a color space issue (need further feedback on this one, let me know if this did it)
+- Reduced the minimum screen brightness (added two additional levels)
+- Themes can now disable the "Main Menu" text (for those that prefer logos)
+
 ## 16. January 2023
 
 - Nearest-point scaler is now dual-threaded (pinned to core 3 & 4)

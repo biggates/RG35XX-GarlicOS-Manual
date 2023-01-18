@@ -2,18 +2,11 @@
 
 ## 画面比例
 
-看个人喜好了，我喜欢保持纵横比 keep aspect ratio 和整数倍率缩放 integer scaling 。
+在 Settings - Video - Scaling 中。
 
-TODO: 确认正确的配置路径
+看个人喜好了，我喜欢保持纵横比 `Keep Aspect Ratio` 和整数倍率缩放 `Integer Scale` 。
 
-TODO: 补图
+## 缩略图
 
-## 按键映射
+有可能需要启用 playlist 才能实现，还没研究清楚。
 
-默认的 GarlicOS 不显示缩略图，因此可以考虑给它映射一个按键 X。
-
-TODO: 确认是否有效
-
-TODO: 确认正确的配置路径
-
-TODO: 补图
