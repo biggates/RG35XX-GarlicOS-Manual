@@ -2,6 +2,14 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 18. January 2023
+
+- Fixed GarlicOS main menu frame limiter
+- Fixed dosbox_pure libretro core (DOS games)
+- Tapping the menu key inside a game now takes you back to the recent game screen
+- Exiting the RetroArch main screen now properly restores your GarlicOS cursor location
+- RetroArch now remembers your volume setting
+
 ## 17. January 2023
 
 - Set block_sram_overwrite = "true" to increase savestate stability
