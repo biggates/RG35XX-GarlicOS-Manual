@@ -2,6 +2,16 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 19. January 2023
+- Fixed a crash related to file names starting with `(`, `[` or `.`
+- Fixed a paging issue in the game system menu that produced empty pages
+- Changed the key repeat code in the main menu to better handle VSync
+- Added the `puae_2021` libretro core and made it the `AMIGA` & `AMIGACD` default core (pretty much a free speed boost, still not full speed though)
+- Added a 100ms wind-up time to scroll animations (this should prevent accidental item skips on single d-pad presses)
+- Game lists now load WAY faster
+- Added support for game art overlays (`CFW/skin/game-overlay.png`, please use alpha-blending sparingly as it is a very CPU intensive operation)
+- Added a hide guide button text option (`CFW/skin/settings.json`)
+
 ## 18. January 2023
 
 - Fixed GarlicOS main menu frame limiter

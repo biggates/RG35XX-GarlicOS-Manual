@@ -25,6 +25,27 @@ RetroArch 的 playlist 是以 `.lpl` 为后缀名的 JSON 文件。
 
 缩略图的文件名应和 playlist 中的 `label` 完全一致，但 `label` 中的 <code>$*/:\`<>?\|</code> 这几个字符应当被替换为 `_`。
 
+## Game Arts
+
+在 2023-01-12 的版本后开始支持.
+
+via https://www.reddit.com/r/RG35XX/comments/10fyf1a/question_for_those_who_use_garlicos/
+
+将 640x480 的图片按 ROMS 的文件夹规则放置在: `/CFW/skin/games/` 下，或也可以再按模拟器做一层文件夹。
+
+例如:
+
+```
+/CFW/skin/games/
+    GBA/
+        Advance Wars (USA).zip.png
+        Kirby _ The Amazing Mirror (USA).zip.png
+```
+
+按该种方法可以在游戏列表中显示图片，但是直接使用满屏图片的效果并不特别如意，会和游戏名产生很大的干扰，如下图所示:
+
+![](./images/game_art_example.png)
+
 ## 参考
 
 - [RGUI Interface](https://docs.libretro.com/guides/rgui/)
