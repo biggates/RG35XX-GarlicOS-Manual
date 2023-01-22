@@ -2,6 +2,29 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 22. January 2023
+
+- Fixed a bug in the recent game list that (sometimes) required you to delete a game twice for it to disappear
+- The linear scaler is now hardware-accelerated (using the LCD panel's hardware-scaler plus some glue-code to ensure "Keep aspect ratio" doesn't break, using this new scaler also solves all the remainder tearing issues people reported in games like Super Mario Bros)
+- The hardware-accelerated linear scaler is now set as the default scaler for every core (this translates to a free 20% performance boost & universal tearing fix pretty much)
+- The LQ2x filter is now enabled by default for all cores except those that have known compatibility issues with it (so we can benefit from the hardware scaler's tearing-resistance on as many systems as possible, let me know if you find cores that are incompatible with it)
+- Added a core override for PCSX-ReARMed & DOSBox Pure to fall back to the software based nearest scaler instead of the LQ2x filter + hardware based bilinear scaler as it produces what I consider better visuals)
+- Disabled RA notifications as the mix of hardware and software based scaling across cores produces inconsistently sized font glyphs)
+- Disabled savestate compression to accelerate savestate creation
+
+## 21. January 2023
+
+- Overclocked the CPU to 1.3GHz (+300MHz)
+- Upped the < 800MHz CPU voltage by 0.025V (fixes random freezes)
+- Upped the Menu button hotkey hold time from 150ms to 250ms (should fix the need for double-tapping the Menu key)
+- Upped the scroll animation inhibition time (should make single d-pad  taps more in the game lists more precise / less likely to skip an entry due to repeats)
+- Optimized the main menu renderer (60%+ CPU use reduction when idle)
+- Added a dosbox_pure libretro core setting override to auto-enable max CPU cycles (this should help a few tricky games run fullspeed OOB)
+- Re-enabled audio synchronization (we previously disabled it because it  helped MD frame pacing but it completely destroyed audio output across  the board by introducing noticeable stutters)
+- The main menu is now rendered in 32bit colors (a future update will bring 32bit color support for RetroArch as well)
+- Fixed a bug that could cause duplicated items in the recent game list
+- Fixed a regression that broke sleep/resume for games stored on TF2
+
 ## 19. January 2023
 - Fixed a crash related to file names starting with `(`, `[` or `.`
 - Fixed a paging issue in the game system menu that produced empty pages
