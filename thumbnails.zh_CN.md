@@ -29,9 +29,9 @@ RetroArch 的 playlist 是以 `.lpl` 为后缀名的 JSON 文件。
 
 在 2023-01-12 的版本后开始支持, 在 2023-01-23 的版本中得到了改善。
 
-via https://www.reddit.com/r/RG35XX/comments/10fyf1a/question_for_those_who_use_garlicos/
+将 640x480 的图片按 ROMS 的文件夹规则放置在: `/Roms/Imgs/` 下，需要再按模拟器做一层文件夹。
 
-将 640x480 的图片按 ROMS 的文件夹规则放置在: `/Roms/Imgs/` 下，或也可以再按模拟器做一层文件夹。
+(注: 似乎有点问题)
 
 例如:
 
@@ -42,7 +42,9 @@ via https://www.reddit.com/r/RG35XX/comments/10fyf1a/question_for_those_who_use_
         Kirby _ The Amazing Mirror (USA).png
 ```
 
-(下面是2023-01-12 的版本中的路径)
+(下面是 2023-01-12 的版本中的路径)
+
+via https://www.reddit.com/r/RG35XX/comments/10fyf1a/question_for_those_who_use_garlicos/
 
 ```
 /CFW/skin/games/
