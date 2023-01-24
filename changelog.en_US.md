@@ -2,6 +2,24 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 24. January 2023
+
+- Fixed a crash that occured after removing the last favorite from the list while being inside the favorites menu
+- Fixed a bug in the recent game list where unsorted lists resulted in duplicate entries
+- Settled for a 1.5GHz overclock because a lot of units out there couldn't reliable handle 1.6GHz (select will now toggle from 1.0GHz to 1.3GHz (+) to 1.5GHz (++) to 700MHz (-) to 500MHz (--) and back to 1.0GHz)
+- Fixed a typo in the game art paths (pre-populated OnionOS cards in TF2 should now load their artwork properly)
+- Game art and screenshots are now scaled bilinear to fit the rest of the OS's default settings
+
+## 23. January 2023
+
+- The battery calculation formula has been altered to (hopefully) return more accurate results (its unlikely we'll ever get a 100% accurate battery reading out of this device though)
+- Files containing $ or ! in their name will now load properly (Wario Ware)
+- Artwork is now loaded from Roms/Imgs/SystemName/GameFileNameWithoutExtension.png (the old path CFW/skin/games/SystemName/GameFileNameWithExtension.png is still  supported though)
+- Added a 1.6GHz overclock option (+300MHz compared to the last build)
+- Added UC/OC profiles (toggle between them with the SELECT button, -- equals 500MHz, - equals 700MHz, nothing equals the 1GHz default, + equals 1.3GHz and ++ equals 1.6GHz)
+- CPU hot-plug has been disabled to ensure in-use cores don't get disabled mid-gameplay (this should reduce thread-relocation-related stutters)
+- Fixed the screen timing (from 56Hz to 60Hz)
+
 ## 22. January 2023
 
 - Fixed a bug in the recent game list that (sometimes) required you to delete a game twice for it to disappear
