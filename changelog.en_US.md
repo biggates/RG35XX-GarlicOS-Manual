@@ -2,6 +2,10 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## January 2023:
+
+- Added HDMI audio support (requires you to plug in the HDMI cable before starting the game, also, never unplug the HDMI cable while playing, it will freeze the system so exit your game first and unplug it once you're back in the GarlicOS menu)
+
 ## 24. January 2023
 
 - Fixed a crash that occured after removing the last favorite from the list while being inside the favorites menu
