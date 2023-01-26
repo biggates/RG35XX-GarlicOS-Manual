@@ -2,17 +2,34 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
-## January 2023:
+## 26. January 2023
+
+- Fixed the XRGB8888 color converter in the MAME2003-Xtreme core (fixes Captain America and The Avengers amongst others)
+
+## 25. January 2023
 
 - Added HDMI audio support (requires you to plug in the HDMI cable before starting the game, also, never unplug the HDMI cable while playing, it will freeze the system so exit your game first and unplug it once you're back in the GarlicOS menu)
+- Added downscaling support to the hardware accelerated bilinear scaler (this should fix the cut-off screen issues the bilinear scaler had)
+- Normal4x filter now runs 25% faster (its a viable option for some cores now)
+- Normal2x is now the default filter for most cores (sharpest looking pixels we can afford while still using most of the screen real estate)
+- Fixed a backlight related regression that snuck in when I first added HDMI audio support earlier today
+- Added a core override for gambatte & gpSP to force nearest scaling (as display mode changes cause noticeable flickering on the gambatte core, making it difficult to use the hardware scaler there and gpSP simply looking better on the nearest scaler)
+- Optimized the savestate screenshot loader (they load a bit faster now)
+- Reduced input latency
+- Fixed the O1555RGB color converter in the MAME2003-Xtreme core (fixes Captain Commando amongst others)
+- Created an overlay for the MAME2003-Xtreme core to disable the Normal2x filter (it doesn't really handle it well)
 
 ## 24. January 2023
 
 - Fixed a crash that occured after removing the last favorite from the list while being inside the favorites menu
 - Fixed a bug in the recent game list where unsorted lists resulted in duplicate entries
-- Settled for a 1.5GHz overclock because a lot of units out there couldn't reliable handle 1.6GHz (select will now toggle from 1.0GHz to 1.3GHz (+) to 1.5GHz (++) to 700MHz (-) to 500MHz (--) and back to 1.0GHz)
 - Fixed a typo in the game art paths (pre-populated OnionOS cards in TF2 should now load their artwork properly)
 - Game art and screenshots are now scaled bilinear to fit the rest of the OS's default settings
+- Settled for a 1.5GHz overclock because a lot of units out there couldn't reliable handle 1.6GHz
+- Switched to the conservative governor and applied a few governor related tweaks to ensure the CPU will scale smoothly between CPU states as needed (this will improve battery life as well as reduce potential stutter)
+- Removed the select CPU frequency toggle because the new governor does a good enough job at picking the right frequency automatically
+- Corrected a typo in yesterday's changelog's artwork path
+- Fixed a game launch error caused by single quotes in filenames (revised to deal with some shell quirks)
 
 ## 23. January 2023
 

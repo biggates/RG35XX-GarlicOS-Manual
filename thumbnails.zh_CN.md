@@ -29,17 +29,34 @@ RetroArch 的 playlist 是以 `.lpl` 为后缀名的 JSON 文件。
 
 在 2023-01-12 的版本后开始支持, 在 2023-01-23 的版本中得到了改善。
 
-将 640x480 的图片按 ROMS 的文件夹规则放置在: `/Roms/Imgs/` 下，需要再按模拟器做一层文件夹。
+将 640x480 的图片按 ROMS 的文件夹规则放置在: `/Roms/{主机名}/Imgs/` 下。
 
-(注: 在 2023-01-24 的版本中仍有问题)
+(注: 在 2023-01-24 的版本中修复了, 但仅支持放在 TF1 中)
 
 例如:
 
 ```
-/Roms/Imgs/
+TF1 中的 Roms 分区
+    Roms/GBA/
+        Imgs/
+            Advance Wars (USA).png
+            Kirby _ The Amazing Mirror (USA).png
+        Advance Wars (USA).zip
+        Kirby _ The Amazing Mirror (USA).gba
+```
+
+或：
+
+```
+TF1 中的 Roms 分区
+    Roms/
+        GBA/Imgs/
+            Advance Wars (USA).png
+            Kirby _ The Amazing Mirror (USA).png
+TF2
     GBA/
-        Advance Wars (USA).png
-        Kirby _ The Amazing Mirror (USA).png
+        Advance Wars (USA).zip
+        Kirby _ The Amazing Mirror (USA).gba
 ```
 
 (下面是 2023-01-12 的版本中的路径)
@@ -50,7 +67,10 @@ via https://www.reddit.com/r/RG35XX/comments/10fyf1a/question_for_those_who_use_
 /CFW/skin/games/
     GBA/
         Advance Wars (USA).zip.png
-        Kirby _ The Amazing Mirror (USA).zip.png
+        Kirby _ The Amazing Mirror (USA).gba.png
+/Roms/GBA/
+    Advance Wars (USA).zip
+    Kirby _ The Amazing Mirror (USA).gba
 ```
 
 按该种方法可以在游戏列表中显示图片，但是直接使用满屏图片的效果并不特别如意，会和游戏名产生很大的干扰，如下图所示:

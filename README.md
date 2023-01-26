@@ -23,9 +23,10 @@ Garlic OS 的文件内容可以从 [Black-Seraph 的 Patreon 页面](https://www
 - [Garlic OS 更新记录 (中文)](./changelog.zh_CN.md)
   - [Garlic OS 更新记录 (原文转载)](./changelog.en_US.md)
 - [如何安装 Garlic OS (Windows) (中文)](./installation.windows.zh_CN.md)
-- [缩略图](./thumbnails.zh_CN.md) (目前仍在施工中)
+- [显示游戏图片](./thumbnails.zh_CN.md) (目前仍在施工中)
 - [常用配置信息](./configuration.zh_CN.md) (目前仍在施工中)
 - [分区信息](./partitions.zh_CN.md)
+- [已知问题](./known_issues.zh_CN.md)
 
 ## 其他资源
 
