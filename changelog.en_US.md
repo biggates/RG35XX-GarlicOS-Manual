@@ -2,6 +2,20 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 28. January 2023
+
+- Added bilinear-multiply scalers (based on eggs' amazing NEON scaler code)
+- Set the Bilinear4x NEON scaler as the new default (this reduces CPU consumption by about 50% and increases graphical fidelity)
+- Fixed keep aspect ratio on all bilinear scalers
+- The integer scaler got a sizeable speed boost
+- Bilinear-multiply scalers now drop down to their next lower tier if a framebuffer overflow is likely
+- Improved the rendering quality of recent game screenshots in the GarlicOS UI
+- Adjusted default settings and core overrides to make use of the new scalers where possible
+- Brought back the overclock select toggle as the conservative governor made too many wrong assumptions during extended testing (the toggle now controls the in-game CPU frequency, the GarlicOS menu always runs at 700MHz regardless of the setting to save on battery)
+- Hidden Linux / MacOS files are now no longer listed in the game browser
+- Added real-time-clock (RTC) support (press start to configure the clock and B or start again to save your clock changes)
+- Fixed a R<->B channel flip bug in the MAME2003-Xtreme core
+
 ## 26. January 2023
 
 - Fixed the XRGB8888 color converter in the MAME2003-Xtreme core (fixes Captain America and The Avengers amongst others)
