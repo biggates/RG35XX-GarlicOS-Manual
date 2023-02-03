@@ -2,6 +2,37 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 1. February 2023 (Part 3)
+
+- Fast-forward no longer freezes the screen on same-thread rendered cores
+- Set the GarlicOS version number to 1.0.2
+
+## 1. February 2023 (Part 2)
+
+- fake08 core (pico-8) now runs on the threaded renderer by default (we need the speed boost)
+- fake08 core is now excluded from loading savestates automatically (as the core tends to crash while loading savestates)
+- fake08 core is now excluded from sleep-resume (as many pico-8 games freeze RetroArch, which means we need to keep the reset button functional as a emergency exit of sorts for when that happens)
+- Set the GarlicOS version number to 1.0.1
+
+## 1. February 2023 (Part 1)
+
+- Threaded rendering is now disabled by default to further reduce input latency where possible (except for PS1 & arcade cores which need threaded rendering to reach full speed)
+- Bilinear has been set as the default scaler for arcade cores (to give these CPU heavy cores more room to breathe)
+- Updated the gpSP (GBA) core
+- The iosched queue manager has been changed from cfb to noop (speeds up file access)
+- MAME name resolution is now done via hash tables for an additional speed boost (~3000 files in ~2 seconds)
+- The FBA2012 folder now has the right icon set
+- Pressing start instead of the A-button when selecting a game will now skip the savestate auto-load function
+- Audio volume no longer gets saved in manually created core overrides (prevents unexpected volume changes on game load)
+- History & BIOS paths no longer get saved in manually created core overrides (prevents unbootable games on TF2 card pull)
+- Added a prboom_libretro (DOOM) core-mapping & system icon
+- Added a meridian time clock style (AM/PM)
+- GarlicOS now memorizes your menu cursor (to the best of its abilities) and restores it on game exit / system boot
+- Tapping the menu key inside GarlicOS' menu will now take you to your recent games
+- Long pressing the menu key inside GarlicOS' menu (> 1000ms without pressing any other keys) will now take you to the main menu
+- The "Main Menu" text has been replaced with a version number display
+- Set the GarlicOS version number to 1.0.0
+
 ## 28. January 2023
 
 - Added bilinear-multiply scalers (based on eggs' amazing NEON scaler code)
