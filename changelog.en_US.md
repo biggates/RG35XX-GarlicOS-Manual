@@ -2,6 +2,28 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 10. February 2023
+
+- Added support for APPS / PORTS (but someone needs to code some first)
+- Added support for UTF8 encoded filenames / strings
+- Skins can now swap every text in the menu (see skin/settings.json)
+- HDMI can now be hot-plugged without crashing the system (let me know if any of you still encounter issues with it)
+- The minimum menu CPU clock has been raised to make up for HDMI mirroring overhead (it couldn't quite keep up in the recent game menu)
+- Fixed the pixel budget calculator (this should fix some fringe-case games that previously overflowed the 1228800 pixel budget and low resolution games that refused to properly scale with the bilinear multiply scalers)
+- Set the GarlicOS version number to 1.0.5
+
+## 4. February 2023
+
+- Fixed a glitch that occured when entering the RetroArch menu while fast forward was active
+- Set the GarlicOS version number to 1.0.4
+-
+## 3. February 2023
+
+- Fixed fast forward framebuffer freezes
+- Fixed freeintv_libretro core (Intellivision)
+- Fixed bogus keyboard inputs (should make games like Nebulus, Monkey Island, etc. playable)
+- Set the GarlicOS version number to 1.0.3
+
 ## 1. February 2023 (Part 3)
 
 - Fast-forward no longer freezes the screen on same-thread rendered cores
