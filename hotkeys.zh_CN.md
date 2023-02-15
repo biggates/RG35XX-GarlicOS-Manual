@@ -17,7 +17,12 @@
 - 电源键 = 睡眠模式。长按电源键 3 秒可以唤醒设备。
 - MENU + R2 = 快速存档
 - MENU + L2 = 快速读档
+- MENU + 左/右 = 切换快速存档位置 (since 1.0.7) (注: 就是读/存哪个档的意思)
 - MENU + R1 = 快进/恢复
 - MENU + 音量+ = 屏幕亮度+
 - MENU + 音量- = 屏幕亮度-
 - MENU + X = RetroArch 快捷菜单
+- MENU + Start = 暂停游戏 (since 1.0.7)
+- MENU + Select = 显示 / 隐藏 FPS (since 1.0.7)
+- MENU + 上 = 截图 (since 1.0.7)
+- MENU + 下 = 静音 (since 1.0.7)

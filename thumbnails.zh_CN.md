@@ -77,6 +77,12 @@ via https://www.reddit.com/r/RG35XX/comments/10fyf1a/question_for_those_who_use_
 
 ![](./images/game_art_example.png)
 
+## 使用 Skraper
+
+使用 [Skraper](https://www.skraper.net/) 可以批量抓取图片、按规则重命名并自动进行图像处理等，功能相当高级。在 Reddit 中有相当成功的案例，但需要详细调节。
+
+在使用过程中，启动 Skraper 的过程相当慢，暂时还没有进一步的资料。
+
 ## 参考
 
 - [RGUI Interface](https://docs.libretro.com/guides/rgui/)

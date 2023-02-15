@@ -1,8 +1,8 @@
 # Garlic OS
 
-Garlic OS 是基于 RetroArch 适配了 RG35XX 的一个编译版本。对应 Miyoo Mini 的 [Onion OS](https://github.com/OnionUI/Onion) 。
+GarlicOS 是基于 RetroArch 在 RG35XX 上的一个系统。可以类比 Miyoo Mini 的 [Onion OS](https://github.com/OnionUI/Onion) 。
 
-Garlic OS 的文件内容可以从 [Black-Seraph 的 Patreon 页面](https://www.patreon.com/posts/76561333) 下载（需要注册账号）。
+GarlicOS 的文件内容可以从 [Black-Seraph 的 Patreon 页面](https://www.patreon.com/posts/76561333) 下载（需要注册账号）。
 
 文件内容：
 
@@ -20,11 +20,20 @@ Garlic OS 的文件内容可以从 [Black-Seraph 的 Patreon 页面](https://www
 
 ## 目录
 
-- [Garlic OS 更新记录 (中文)](./changelog.zh_CN.md)
-  - [Garlic OS 更新记录 (原文转载)](./changelog.en_US.md)
-- [如何安装 Garlic OS (Windows) (中文)](./installation.windows.zh_CN.md)
-- [显示游戏图片](./thumbnails.zh_CN.md) (目前仍在施工中)
-- [常用配置信息](./configuration.zh_CN.md) (目前仍在施工中)
+### 使用手册
+
+- [如何安装和更新 GarlicOS (Windows) (中文)](./installation.windows.zh_CN.md)
+- [GarlicOS 快捷键一览 (中文)](./hotkeys.zh_CN.md)
+- 以下内容尚不完全：
+  - [显示游戏图片](./thumbnails.zh_CN.md) (目前仍在施工中)
+  - [游戏遮罩](./bezels.zh_CN.md) (尚未完成编写)
+  - [常用配置信息](./configuration.zh_CN.md) (尚未开始编写)
+  - [金手指](./cheats.zh_CN.md) (尚未开始编写)
+
+### 技术资料
+
+- [GarlicOS 更新记录 (中文)](./changelog.zh_CN.md)
+  - [GarlicOS 更新记录 (原文转载)](./changelog.en_US.md)
 - [分区信息](./partitions.zh_CN.md)
 - [已知问题](./known_issues.zh_CN.md)
 

@@ -2,6 +2,35 @@
 
 原帖地址在 https://www.patreon.com/posts/76561333 。
 
+## 2023-02-14 (1.0.7)
+
+- 将默认的音频重采样器更换为 `sinc` (这样声音的金属味弱一点)
+- 在 `Gambatte` 和 `gpSP` 核心中仅用了长按 R2 键的快进功能 (因为不工作)
+- 按下 Menu + Start 组合键可以暂停游戏
+- 按下 Menu + Select 组合键可以开关 FPS 的显示 (需要在设置中启用 font overlays)
+- 按下 Menu + 上 组合键可以截图
+- 按下 Menu + 左/右 可以切换快速存储的位置
+- 按下 Menu + 下 组合键可以静音
+- GarlicOS 版本号升级为 `1.0.7`
+
+## 2023-02-13 (1.0.6)
+
+- 修正了 `skin/settings.json` 中的一处笔误
+- 关闭了街机核心中自动读取状态的功能 (因为观察到声音、图像上的问题，以及崩溃)
+- 加入了播放视频的支持 (放在 `VIDEOS` 目录中), 并加入了对应的系统图标
+
+  - 视频需要用 .x264 编码为 mkv 格式
+  - 如使用 ffmpeg:
+
+  ```
+  ffmpeg -i input.mkv -vf scale=640x480 -vcodec libx264 -profile:v main -level 3.1 -preset medium -crf 23 -x264-params ref=4 -acodec libvorbis - - movflags +faststart output.mkv
+  ```
+
+  - 不建议使用 mp4 格式
+  - 不支持字幕
+
+- GarlicOS 版本号升级为 `1.0.6`
+
 ## 2023-02-10 (1.0.5)
 
 - 加入了对 `APPS` / `PORTS` 的支持 (但是需要有人写)

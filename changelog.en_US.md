@@ -2,6 +2,24 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 14. February 2023
+
+- Changed the default audio resampler to sinc (makes audio feel less tinny)
+- Disabled R2 (hold) fast-forwarding in Gambatte & gpSP (as its broken)
+- The emulation can now be paused via Menu + Start
+- The FPS overlay can now be toggled via Menu + Select (this requires font  overlays to be enabled which is currently disabled by default because the IPU scaler has issues sizing it)
+- Screenshots can now be created via Menu + DPad Up
+- The savestate slot can now be changed via Menu + DPad Left / Right
+- The audio can now be muted via Menu + DPad Down
+- Set the GarlicOS version number to 1.0.7
+
+## 13. February 2023:
+
+- Fixed a typo in skin/settings.json
+- Arcade cores are now configured to skip savestate auto-loading (as they cause audio glitches, graphical issues and crashes on these cores)
+- Added video playback support (put them in the VIDEOS folder, encode them  with "ffmpeg -i input.mkv -vf scale=640x480 -vcodec libx264 -profile:v main -level 3.1 -preset medium -crf 23 -x264-params ref=4 -acodec libvorbis - - movflags +faststart output.mkv" and hard-sub your videos if necessary, don't encode to mp4 files as they confuse ffmpeg when seeking, add additional core-mapping folders and system icons as needed to sort your shows)
+- Set the GarlicOS version number to 1.0.6
+
 ## 10. February 2023
 
 - Added support for APPS / PORTS (but someone needs to code some first)
