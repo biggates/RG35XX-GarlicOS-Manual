@@ -26,3 +26,4 @@
 - MENU + Select = 显示 / 隐藏 FPS (since 1.0.7)
 - MENU + 上 = 截图 (since 1.0.7)
 - MENU + 下 = 静音 (since 1.0.7)
+- reset = 如果在加载过程中陷入了死机-重启的死循环，按 reset 可以跳出 (since 1.0.8)

@@ -2,6 +2,86 @@
 
 原帖地址在 https://www.patreon.com/posts/76561333 。
 
+## 2023-02-28 (1.1.7)
+
+- 为 `PUAE` 增加了 `IPF` 的支持
+- 将默认挂载模式修改为 `errors=continue`, 以改善某些 MicroSD 卡的使用体验 (之前会直接卡死)
+- GarlicOS 版本号升级为 `1.1.7`
+
+## 2023-02-28 (1.1.6)
+
+- 修正了 `mednafen_supergrafx` 核心
+- GarlicOS 版本号升级为 `1.1.6`
+
+## 2023-02-28 (1.1.5)
+
+- 加入了对新的 `V6C` 版本的支持 (包含新的 bootloader, u-boot 和一些驱动程序)
+- 调整了缩放器的逻辑，使分辨率不会超过 `1280x1280` (修正了 `Virtual Boy` 模拟中的问题)
+- 修正了 `2048` 核心 (没有文件夹关联，请在 RetroArch 中加载这个核心)
+- 修正了 `reminiscence` 核心 (没有文件夹关联，请在 RetroArch 中加载这个核心)
+- 修正了 `virtualjaguar` 核心 (暂时还太慢，没法玩)
+- GarlicOS 版本号升级为 `1.1.5`
+
+## 2023-02-25 (1.1.4)
+
+- 加入了 `atari800` 核心
+- GarlicOS 版本号升级为 `1.1.4`
+
+## 2023-02-25 (1.1.3)
+
+- 修正了 `tic80` 核心
+- 修正了 `1.0.9` 版本中又出现问题的 HDMI
+- 修正了 FPS 显示值闪烁的问题
+- 通知文字的渐变更和谐一些
+- 删除了一些瞬间完成的任务的进度条
+- 通知系统的很多细节都可以自定义了 (在 RetroArch - Settings - On-Screen Display - On-Screen Notifications 菜单中)
+- GarlicOS 版本号升级为 `1.1.3`
+
+## 2023-02-25 (1.1.2)
+
+- 加入了硬件加速的 alpha 混合遮罩的支持 (暂时用于 RetroArch 通知, 以后也会用于显示帧率、电量、时间等)
+- 由于 `DualShock` 导致太多游戏没法玩了，将 `PS1` 的手柄类型重新改为 `digital` (如果通过 CopyPasteOnTopOfStock 升级，请手动删掉 "CFW/retroarch/.retroarch/config/remaps/PCSX-ReARMed" 这个目录)
+- GarlicOS 版本号升级为 `1.1.2`
+
+## 2023-02-24 (1.1.1)
+
+- 修正了一处影响 PS1 (以及其他分辨率为 320x240) 游戏的菜单缩放错误
+- GarlicOS 版本号升级为 `1.1.1`
+
+## 2023-02-23 (1.1.0)
+
+- Fixed a scaler resolution issue that occured when manually booting a core
+- GarlicOS 版本号升级为 `1.1.0`
+
+## 2023-02-23 (1.0.9)
+
+- 加入了一套新的通知渲染器
+- 重新开启通知
+- 修正了滤波器的闪烁问题
+- 修正了快进通知的闪烁问题
+- 将 `fb1` 帧缓存合并到 `fb0` 以确保快进时的三重缓存空间。这修正了快进时的闪烁问题
+- 快进时将使用 CPU 的最高频率，这样我们就能更快地快进
+- 保存和读取状态时使用 CPU 的最高频率
+- 调整了低于 1 GHz 的 CPU 电压，以减少崩溃
+- GarlicOS 版本号升级为 `1.0.9`
+
+## 2023-02-17 (1.0.8)
+
+- 移除了一些调试代码
+- 修正了最近游戏菜单中的一处内存泄漏
+- 移除了打包时加入的多余文件
+- 默认使用 `sinc` 音频重采样
+- `ScummVM` 游戏可以正确启动了 (如果遇到问题，可以先删除 Saves/CurrentProfile/lists/content_history.lpl)
+- 在最近游戏菜单中，不支持保存状态的核心会显示对应的错误信息 (除了 ScummVM 还有哪个用它?)
+- GarlicOS 主菜单在空闲时使用 500 MHz 的 CPU 频率，在需要时自动提升
+- 加入了 `QUAKE` 的支持 (`tyrquake` 核心)
+- 加入了震动功能的支持 (仅支持机身的震动马达，主要是 PS1 游戏使用)
+- 将 PS1 的手柄类型改为 `DualShock` (以支持震动功能)
+- 不再列出空的主机目录
+- 如果核心或游戏在自动读档过程中进入了死循环，可以按下 reset 键跳出
+- GarlicOS 的镜像文件使用 `-mx9` 压缩
+- GarlicOS 版本号升级为 `1.0.8`
+
 ## 2023-02-14 (1.0.7)
 
 - 将默认的音频重采样器更换为 `sinc` (这样声音的金属味弱一点)

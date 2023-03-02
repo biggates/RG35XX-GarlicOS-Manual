@@ -2,6 +2,86 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 28. February 2023 (Part 3)
+
+- Added IPF support for PUAE
+- Changed the default mount flags to errors=continue to keep the bad stock MicroSD cards at least somewhat functional when they start dying on you (this won't fix them, but the OS won't freeze immediately on the first I/O error they report)
+- Set the GarlicOS version number to 1.1.7
+
+## 28. February 2023 (Part 2)
+
+- Fixed the mednafen_supergrafx libretro core
+- Set the GarlicOS version number to 1.1.6
+
+## 28. February 2023 (Part 1)
+
+- Added support for the new V6C PCB revision (this point includes a new bootloader, u-boot and several driver changes to ensure both pre- and post-V6C models can run off the same kernel)
+- Added some additional checks to the scaler code to ensure width & height don't scale beyond 1280x1280 (this fixes Virtual Boy emulation)
+- Fixed the 2048 libretro core (this is a single-game core and as such has no folder mapping associated with it, to play it, load and start the core within RetroArch)
+- Fixed the reminiscence libretro core (this is a single-game core and as such has no folder mapping associated with it, to play it, load and start the core within RetroArch)
+- Fixed the virtualjaguar libretro core (but its still way too slow to be considered playable)
+- Set the GarlicOS version number to 1.1.5
+
+## 25. February 2023 (Part 3)
+
+- Added the atari800 libretro core
+- Set the GarlicOS version number to 1.1.4
+
+## 25. February 2023 (Part 2)
+
+- Fixed the tic80 libretro core
+- Fixed HDMI (it regressed in version 1.0.9)
+- Fixed FPS display flicker
+- Made the notification text gradient less extreme
+- Removed useless progress percentage indicator from near-instant tasks
+- Made all parts of the notification system configurable (RetroArch -> Settings -> On-Screen Display -> On-Screen Notifications) which means you can use a custom font, font size, font color and change the text's alignment as needed (0 is left / top, 0.5 is center, 1 is right / bottom)
+- Set the GarlicOS version number to 1.1.3
+
+## 25. February 2023 (Part 1)
+
+- Added support for hw-accelerated alpha-blended overlays (these are now being used for RetroArch notifications, but will, in future builds, also be used to provide system-frames and in-game battery / clock display)
+- Reverted the PS1 gamepad type to digital as the DualShock type rendered too many games unplayable (if updating via CopyPasteOnTopOfStock please make sure to delete the "CFW/retroarch/.retroarch/config/remaps/PCSX-ReARMed" directory before updating)
+- Set the GarlicOS version number to 1.1.2
+
+## 24. February 2023
+
+- Fixed a menu scaling issue that affected PS1 games (and any other system that rendered at exactly 320x240)
+- Set the GarlicOS version number to 1.1.1
+
+## 23. February 2023 (Part 2)
+
+- Fixed a scaler resolution issue that occured when manually booting a core
+- Set the GarlicOS version number to 1.1.0
+
+## 23. February 2023 (Part 1)
+
+- Added new notification renderer
+- Re-enabled notifications
+- Fixed filter screen flicker
+- Fixed fast forward screen notification flicker
+- Absorbed the fb1 framebuffer (original HDMI framebuffer) into fb0 to ensure we have enough memory to triple buffer for flicker-free fast forwarding
+- Fast forward top-clocks the CPU now (so we can fast-forward faster)
+- Saving and loading states top-clocks the CPU now (so we can save or load states faster)
+- Adjusted <= 1GHz voltages to account for lemon unit (less crashes)
+- Set the GarlicOS version number to 1.0.9
+
+## 17. February 2023
+
+- Removed some debug code
+- Fixed a memory leak in the recent game menu
+- Removed a rogue file that snuck into the bundle
+- We're now using the sinc audio resampler by default (I messed this setting up on the previous build by accident)
+- ScummVM games should now start properly (if you used the workaround that's been making the rounds on Discord, please make sure to delete Saves/CurrentProfile/lists/content_history.lpl first before reporting issues)
+- Cores that don't support savestates will now display a message indicating so in the recent game menu (do we need this for anything other than ScummVM?)
+- The GarlicOS menu now runs at 500MHz when idle and increases the CPU clock as needed while scrolling (to increase fluidity AND save battery where possible)
+- Added a core mapping for QUAKE support (tyrquake libretro core)
+- Added rumble motor support (built-in gamepad only, mostly for PS1 games)
+- Changed the PS1 gamepad type to DualShock (so we can make use of the rumble motor)
+- Added a OnionOS artefact filter to prevent otherwise empty console directories from being listed
+- One can now press the reset button to escape auto-resume boot-loops caused by broken cores or games
+- The provided download files are now -mx9 compressed (which shaves off about 20mb or so...)
+- Set the GarlicOS version number to 1.0.8
+
 ## 14. February 2023
 
 - Changed the default audio resampler to sinc (makes audio feel less tinny)
