@@ -2,6 +2,31 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 7. March 2023:
+
+- Fixed the dinothawr libretro core
+- GarlicOS' recent game menu screenshot renderer now respects the global retroarch.cfg aspect ratio setting
+- Changed the boot_cap_threshold from 3% to 0% (this should allow the device to boot when the broken battery meter reports the battery as 0%)
+- Savestates now get synced to disk before poweroff
+- Partitions now get error-checked on system start
+- Added external gamepad support to the GarlicOS UI (tested with 8bitdo XInput controllers, we'll probably need a vendor + product ID keylayout database of sorts so we can support a larger variety of gamepads OOB, still debating on how to best share gamepad mappings between RetroArch & the GarlicOS UI...)
+- External controllers now control the RetroArch player 1 slot by default (if present)
+- Brightness controls are now ignored while HDMI is in use
+- The built-in monitor now gets disabled while HDMI is in use
+- The HDMI overlay flicker issue in GarlicOS' recent game menu has been fixed
+- Set the GarlicOS version number to 1.2.0
+
+## 3. March 2023:
+
+- Fixed a speaker malfunction that occured on some (not all) V6.0 PCBs
+- Set the GarlicOS version number to 1.1.9
+
+## 2. March 2023:
+
+- Fixed a integer scale regression that snuck in with build 1.1.2
+- Fixed a button spam issue caused by the recently added V6C PCB support
+- Set the GarlicOS version number to 1.1.8
+
 ## 28. February 2023 (Part 3)
 
 - Added IPF support for PUAE
