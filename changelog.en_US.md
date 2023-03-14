@@ -2,6 +2,81 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 12. March 2023 (Part 3):
+
+- Re-compiled mGBA with additional compiler tweaks (performance gains)
+- Tweaked the mGBA override to further optimize performance
+- Set the GarlicOS version number to 1.2.7
+
+## 12. March 2023 (Part 2):
+
+- Disabled audio synchronization for mGBA (as it helps maintain a more stable framerate)
+- Enabled automatic frame-skipping for mGBA (as some games are still too much for the RG35XX to run at 60FPS locked, certain Golden Sun battle effects for example can dip it as low as 40FPS at times if a - full enemy group is encountered)
+- Set the GarlicOS version number to 1.2.6
+
+## 12. March 2023 (Part 1):
+
+- Updated the mGBA core (to this commit)
+- Reverted from sinc to nearest audio resampler (as sinc caused audio stutter in several cores)
+- Changed the audio resampler sample rate to 44.1 KHz (further reduces stutter somehow, gaining us an additional frame when testing with mGBA)
+- Changed the default GBA core from gpSP to mGBA (fixes several broken games and adds support for the GBA solar sensor)
+- The mGBA core is now threaded by default (required for GBA games to run at full speed reliably)
+- Added a GPSP folder mapping and system icon (for those that absolutely need their GBA games to run with gpSP)
+- Added support for eggs' improved 3x NEON scaler (this affects both pixel-accurate as well as bilinear scalers)
+- Added a Bilinear3x scaling option based on eggs' improved 3x NEON scaler
+- Made the Bilinear3x scaling option the new default (its a little more lightweight than the Bilinear4x option and is good enough for the 640x480 screen inside this device, this translates to free performance gains pretty much)
+- Added a Gambatte Bilinear4x override (the extremely low input resolution of the Gameboy makes it worthwhile here)
+- Added a better looking 6x10 Russian bitmap font to RetroArch (thanks to XQuader)
+- Added Thai localization (thanks to svvv)
+- Added Greek localization (thanks to Saki)
+- Added Bulgarian localization (thanks to Saki)
+- Set the GarlicOS version number to 1.2.5
+
+## 11. March 2023:
+
+- Added French localization (thanks to mrnestaya)
+- Added Brasilian Portuguese localization (thanks to Vieira)
+- Added Japanese localization (thanks to NonStopCombo)
+- Fixed character encoding issue with the MicroSD card install image
+- Set the GarlicOS version number to 1.2.4
+
+## 9. March 2023 (Part 3):
+
+- Corrected German localization
+- Corrected Spanish localization (this one requires CopyPasteOnTopOfStock users to delete the lang subfolder & language.flag file before copying the new files over)
+- Added Catalan localization (thanks to nademonogatari)
+- Added Dutch localization (thanks to Jarno_Jarno & 4UIHV882)
+- Added Filipino localization (thanks to ponyeta)
+- Added Indonesian localization (thanks to andhifarij)
+- Added Italian localization (thanks to l1n0)
+- Added Portuguese localization (thanks to Loid)
+- Added Russian localization (thanks to Dmitrii)
+- Added Simplified Chinese localization (thanks to G.R.H)
+- Added Traditional Chinese localization (thanks to G.R.H)
+- Added Vietnamese localization (thanks to Bonano)
+- Added font size support to localization files
+- RetroArch now honors the selected language setting and will display localized menus & notifications where possible
+- Added a gpSP override to run the core threaded (helps alleviate the audio stutter issues some games are exhibiting)
+- Set the GarlicOS version number to 1.2.3
+
+## 9. March 2023 (Part 2):
+
+- Added a Spanish localization (provided by Vidnez)
+- Set the GarlicOS version number to 1.2.2
+
+## 9. March 2023 (Part 1):
+
+- Fixed the boot issue some units suffered from (figured out that fscking the cards on the device itself isn't an option as checking 256GB+ cards requires more RAM than we have)
+- Low battery states no longer prevent the device from booting (now you can use the last 15% of your battery properly)
+- Added support for localization
+- Added a German localization
+- Added a (Google Translated) Chinese localization (to test the CJK font, feel free to send in a better one)
+- Start now leads to a combined settings menu containing both RTC and language settings
+- No longer supported skin settings have been removed from skin/settings.json
+- The Oswald font file has been moved from the skin to the font directory
+- RTC now reads the localized AM / PM string from the language files
+- Set the GarlicOS version number to 1.2.1
+
 ## 7. March 2023:
 
 - Fixed the dinothawr libretro core
