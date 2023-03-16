@@ -2,6 +2,21 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 16. March 2023:
+
+- Fixed the OnionOS (V4.1) mGBA cross save state support
+- Set the GarlicOS version number to 1.3.0
+
+## 15. March 2023 (Part 2):
+
+- Rolled back the mGBA core to commit e5532cf to fix a audio stutter regression (this breaks OnionOS cross save state support as they run a different commit of mGBA as well as all current mGBA save states but it had to be done to fix the audio issues people have been experiencing... as such, please backup your saves and use the GBA's normal save system to migrate your games over to this new core)
+- Set the GarlicOS version number to 1.2.9
+
+## 15. March 2023 (Part 1):
+
+- Fixed a regression caused by the new V6C compatible bootloader that got the CPU stuck in <= 800MHz mode (it picked the wrong CPU opp table based on values provided by the bootloader, this fixes mGBA's performance issue)
+- Set the GarlicOS version number to 1.2.8
+
 ## 12. March 2023 (Part 3):
 
 - Re-compiled mGBA with additional compiler tweaks (performance gains)
