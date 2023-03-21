@@ -2,6 +2,22 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 19. March 2023:
+
+- Fixed another color conversion issue in the sameduck (Mega Duck) libretro core (thanks to XQuader)
+- Fixed a rendering issue in the reminiscence libretro core (thanks to XQuader)
+- Set the GarlicOS version number to 1.3.2
+
+## 17. March 2023:
+
+- Merged tf1save.cfg into retroarch.cfg (so that directly-booted RetroArch instances can share saves with GarlicOS-booted TF1 games)
+- Screenshots are now saved into the game's MicroSD card's Screenshots directory (another step closer to mimicking the OnionOS directory structure where possible)
+- Lowered the shutdown power button hold time in GarlicOS' main menu from 1 second to 500 milliseconds (this should help with units rebooting rather than shutting down)
+- Fixed the sameduck (Mega Duck) libretro core (thanks to XQuader)
+- Fixed the opera (3DO) libretro core (thanks to XQuader)
+- Added a hotkey button guide to RetroArch (hold down the Menu button while in-game to display it)
+- Set the GarlicOS version number to 1.3.1
+
 ## 16. March 2023:
 
 - Fixed the OnionOS (V4.1) mGBA cross save state support

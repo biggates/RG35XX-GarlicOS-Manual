@@ -2,6 +2,22 @@
 
 原帖地址在 https://www.patreon.com/posts/76561333 。
 
+## 2023-03-19 (1.3.2)
+
+- 修正了 `sameduck` (Mega Duck) 核心中的一处颜色转换的问题 (感谢 XQuader)
+- 修正了一处 `reminiscence` 核心中的渲染问题 (感谢 XQuader)
+- GarlicOS 版本号升级为 `1.3.2`
+
+## 2023-03-17 (1.3.1)
+
+- 将 `tf1save.cfg` 合并到 `retroarch.cfg` 中，这样直接启动的 RetroArch 就可以和通过 GarlicOS 启动的 TF1 使用相同的存档了
+- 截图会保存到游戏所在的 MicroSD 卡的 `Screenshots` 文件夹中，和 OnionOS 的文件结构保持一致
+- 在 GarlicOS 主菜单中，将电源按键触发关机的时间由 1 秒缩短为 500 ms，以修正关机时意外重启的问题
+- 修正了 `sameduck` (Mega Duck) 核心 (感谢 XQuader)
+- 修正了 `opera` (3DO) 核心 (感谢 XQuader)
+- 在游戏中长按 Menu 键可以显示 RetroArch 快捷键说明
+- GarlicOS 版本号升级为 `1.3.1`
+
 ## 2023-03-16 (1.3.0)
 
 - 修正了对 OnionOS (V4.1) 版本 `mGBA` 核心的快速存档的支持
