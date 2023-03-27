@@ -2,6 +2,27 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 25. March 2023:
+
+- The gamepad driver has been rewritten from scratch and now acts like a proper XInput gamepad (this fixes the double-keyboard input issue in all keyboard-based cores, the RA search dialog and several other RA text input menu points but will break ports & apps with hardcoded gamepad mappings, because of this, a mirror of version 1.3.4 will be kept up for a month to give port and app developers time to adapt to these changes)
+- Set the GarlicOS version number to 1.3.5
+
+## 24. March 2023:
+
+- The Saves & Screenshots directories are now auto-created on boot (to work around some retroarch.cfg limitations... this fixes the screenshot issues people were reporting)
+- The rumble motor now receives its data via a separate thread (this fixes the FPS drops people have been experiencing in rumble enabled PlayStation & GBA games)
+- The rumble motor strength merging formula has been adjusted to provide a better range of motion (this makes driving in Gran Turismo 2 quite a bit more satisfying)
+- Exiting RetroArch now resets the rumble motor
+- Set the GarlicOS version number to 1.3.4
+
+## 22. March 2023:
+
+- Updated the scummvm libretro core with "Virtual On-Screen Keyboard" and "Joypad mappings override" support (thanks to XQuader)
+- Bundled the ScummVM "BIOS" files (OnionOS seems fine doing it, so I figure they should be okay to have OOB)
+- Cleaned up some stray files (emptied the Cheats subfolder, wiped the retroarch.log file and a stray mGBA config folder)
+- Split the archives into 200MB parts (as the ScummVM BIOS files grew them beyond Patreon's file size limitations)
+- Set the GarlicOS version number to 1.3.3
+
 ## 19. March 2023:
 
 - Fixed another color conversion issue in the sameduck (Mega Duck) libretro core (thanks to XQuader)
