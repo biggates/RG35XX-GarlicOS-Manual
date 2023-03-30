@@ -9,7 +9,7 @@ GarlicOS 的文件内容可以从 [Black-Seraph 的 Patreon 页面](https://www.
 - `CopyPasteOnTopOfStock.7z` 中的 `misc`, `ROMS`, `BIOS` 等文件夹直接复制到官方镜像的对应分区中，用于升级。
 - `MicroSDCardImage.7z` 是整个 TF 卡的镜像 (`garlic.img`), 建议使用 [balenaEtcher](https://www.balena.io/etcher/) 还原到 TF 卡。
 
-建议将 ROM 和存档 (TODO) 放在 TF2 中，这样换机和维护都比较方便。
+建议将 ROM (注: 存档自动和 ROM 放在一张卡中) 放在 TF2 中，这样换机和维护都比较方便。
 
 本 repo 的风格:
 
@@ -39,7 +39,9 @@ GarlicOS 的文件内容可以从 [Black-Seraph 的 Patreon 页面](https://www.
 
 ## 其他资源
 
-- [一些 RG35XX 资源下载 (百度网盘)](https://pan.baidu.com/s/1jHsoRIHnCFNSarL5DOmkJA?pwd=35xx#list/path=%2F)
+- [一些 RG35XX 资源下载 (百度网盘)](https://pan.baidu.com/s/1jHsoRIHnCFNSarL5DOmkJA?pwd=35xx)
+- [百度网盘链接 by 捌佰](https://pan.baidu.com/s/1SZW7v1PogrKP2ZC2GMif8A?pwd=dqd3)
+- [百度网盘链接 by 六六](https://pan.baidu.com/s/1kbVz_cNWY7TAAVHgfAzYZQ?pwd=0663)
 
 ## 参考资料
 

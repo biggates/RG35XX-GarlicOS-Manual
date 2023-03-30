@@ -2,6 +2,27 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 30. March 2023:
+
+- Fixed a bug in the GL5203 SD/MMC driver that caused I/O micro stutters
+- Set the GarlicOS version number to 1.3.8
+
+## 29. March 2023:
+
+- Reverted a fake08 commit that caused broken savestates (Commit 89ae9ae)
+- Fixed a use-after-free bug in fake08's Host::saveCartData function (this was the cause of several games crashing on exit)
+- Added a D-Pad mapping function to the PCSX ReARMed core (this will allow people to use the DualShock gamepad type / rumble support with games that require both D-Pad and analog stick input, thanks to XQuader for this)
+- Set the GarlicOS version number to 1.3.7
+
+## 28. March 2023:
+
+- The power button is now mapped as an additional gamepad button (BTN_Z) in the new kernel driver and can thus be used without additional userspace hacks
+- The RetroArch power button key scancode hack has been removed as it is no longer needed
+- The scummvm core has been updated to fix a index-shift bug in the new OSK code (by XQuader)
+- The fake08 core has been updated (Commit e9fe530)
+- Savestate auto-loading & auto-resume has been re-enabled for fake08 (I hope the updated core is stable enough for it now)
+- Set the GarlicOS version number to 1.3.6
+
 ## 25. March 2023:
 
 - The gamepad driver has been rewritten from scratch and now acts like a proper XInput gamepad (this fixes the double-keyboard input issue in all keyboard-based cores, the RA search dialog and several other RA text input menu points but will break ports & apps with hardcoded gamepad mappings, because of this, a mirror of version 1.3.4 will be kept up for a month to give port and app developers time to adapt to these changes)

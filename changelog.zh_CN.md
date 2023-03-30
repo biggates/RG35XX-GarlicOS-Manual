@@ -2,6 +2,27 @@
 
 原帖地址在 https://www.patreon.com/posts/76561333 。
 
+## 2023-03-30 (1.3.8)
+
+- 修正了一处导致 I/O 轻微卡顿的 `GL5203` SD/MMC 驱动程序中的问题
+- GarlicOS 版本号升级为 `1.3.8`
+
+## 2023-03-29 (1.3.7)
+
+- 由于自动存档功能损坏，将 `fake08` 回滚至 [Commit 89ae9ae](https://github.com/jtothebell/fake-08/commit/89ae9aea6e7dd818ff0044cdb1ddff8848f3045e)
+- 修正了 `fake08` 的 `Host::saveCartData()` 函数中的一处非法调用的问题 (导致一些游戏在退出时崩溃)
+- 在 `PCSX ReARMed` 核心中增加了方向键的映射功能 (在一些同时需要方向键和摇杆的游戏中可以使用 `DualShock` 手柄类型，及振动马达功能, 感谢 XQuader)
+- GarlicOS 版本号升级为 `1.3.7`
+
+## 2023-03-28 (1.3.6)
+
+- 电源键现在在新的内核驱动程序中被映射为手柄上的一个按键 (`BTN_Z`) ，这简化了一些开发操作
+- 由于上一条, 移除了不再需要的 RetroArch 中关于电源键的逻辑
+- 更新了 `scummvm` 核心以支持新的 `OSK` 代码中的一处位移错误 (感谢 XQuader)
+- 将 `fake08` 核心更新至 [Commit e9fe530](https://github.com/jtothebell/fake-08/commit/e9fe530dfdb91d80921ac490d0dfa5d184111c69)
+- 重新启用了 `fake08` 核心的自动读档和自动存档功能 (希望更新后的核心足够稳定)
+- GarlicOS 版本号升级为 `1.3.6`
+
 ## 2023-03-25 (1.3.5)
 
 - 重写了手柄的驱动程序 (修正了输入变成两次的问题，具体包括所有基于键盘的核心、RetroArch 搜索框、RetroArch 可输入的菜单。但这会导致一些硬编码的核心和 app 无法工作。因此 `1.3.4` 版本将在 Patreon 中保留最多一个月，以便这些应用做出调整)

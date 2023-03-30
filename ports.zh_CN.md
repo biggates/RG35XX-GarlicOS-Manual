@@ -1,4 +1,4 @@
-# ports
+# ports 移植游戏
 
 ## DevilutionX (Diablo)
 
@@ -12,3 +12,8 @@ https://github.com/JoeStaff/devilutionX/releases
 
 - https://www.reddit.com/r/RG35XX/comments/111tahx/devilutionx_diablo_1_for_rg35xxgarlicos_initial/
 - https://github.com/JoeStaff/devilutionX
+
+
+## 参考资料
+
+- https://www.rg35xx.com/en/
