@@ -59,20 +59,6 @@ TF2
         Kirby _ The Amazing Mirror (USA).gba
 ```
 
-(下面是 2023-01-12 的版本中的路径)
-
-via https://www.reddit.com/r/RG35XX/comments/10fyf1a/question_for_those_who_use_garlicos/
-
-```
-/CFW/skin/games/
-    GBA/
-        Advance Wars (USA).zip.png
-        Kirby _ The Amazing Mirror (USA).gba.png
-/Roms/GBA/
-    Advance Wars (USA).zip
-    Kirby _ The Amazing Mirror (USA).gba
-```
-
 按该种方法可以在游戏列表中显示图片，但是直接使用满屏图片的效果并不特别如意，会和游戏名产生很大的干扰，如下图所示:
 
 ![](./images/game_art_example.png)
@@ -81,7 +67,40 @@ via https://www.reddit.com/r/RG35XX/comments/10fyf1a/question_for_those_who_use_
 
 使用 [Skraper](https://www.skraper.net/) 可以批量抓取图片、按规则重命名并自动进行图像处理等，功能相当高级。在 Reddit 中有相当成功的案例，但需要详细调节。
 
+在此参考 [来自 reddit 的帖子](https://www.reddit.com/r/RG35XX/comments/120p5k7/psa_mogrify_is_not_needed_for_positioning_box_art/) , 摘录如下:
+
+### 效果
+
+使用这一方案的最终结果如下图所示：
+
+![](./images/skraper_result.jpg)
+
+
+### Skraper 的操作流程
+
+1. 在左侧点击 "All Systems"
+2. 点击 "Media" 选项卡
+3. 在 "Media Type" 中选择 "User Provided Mix"
+4. 下载 [这个 xml](./assets/skraper_image_mix.xml)
+5. 在 Skraper 中选择这个文件
+6. 应该能看到如下所示的效果图 (请注意图片已经放置在靠左的位置了):
+
+  ![](./images/skraper_example_1.png)
+
+### 其他配置
+
+在 TF1 的 `ROMS` 分区的 `/CFW/skin/settings.json` 文件中，做如下修改:
+
+```
+"text-alignment": "left",
+"text-margin": 300
+```
+
+### 其他问题
+
 在使用过程中，启动 Skraper 的过程相当慢，暂时还没有进一步的资料。
+
+![](./images/skraper_boot.png)
 
 ## 参考
 

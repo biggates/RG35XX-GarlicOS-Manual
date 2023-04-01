@@ -14,6 +14,15 @@ https://github.com/JoeStaff/devilutionX/releases
 - https://github.com/JoeStaff/devilutionX
 
 
+## Super Mario 64 port
+
+按 https://retrogamecorps.com/2023/01/03/anbernic-rg35xx-starter-guide/ 的内容摘录如下:
+
+* `sm64` 文件夹不要改名
+* 确认 `sm64` 文件夹中有 `baserom.us.z64` 文件 (md5 值为 `20b854b239203baf6c961b850a4a51a2`)
+* 没有自动存档功能
+* 建议使用 "++" 频率运行，并且还有一些卡顿现象
+
 ## 参考资料
 
 - https://www.rg35xx.com/en/
