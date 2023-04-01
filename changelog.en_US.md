@@ -2,6 +2,19 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 1. April 2023:
+
+- The menu & volume up button no longer trigger L3 / R3 inside of auto-mapped RetroArch cores (this fixes unwanted double-mapping of these buttons in FCEUmm and can, for those that like to custom map things, be reverted by messing with the "RG35XX Gamepad" automapping file)
+- The hardware-accelerated overlay render code is now multithreaded, double-buffered and frame-limited (no more flickering notifications)
+- The hardware-accelerated overlay render code now supports more than 2 Z-layers (which was a requirement for the next point on the list)
+- System borders (also called RetroArch overlays) are now supported and can be configured within RetroArch (at the moment this is limited to 640x480 pixel single-image overlays)
+- Several RG35XX-compatible system border overlays have been added (so far FC, SFC, GB, GBC & GBA, feel free to craft your own following the templates found inside the CFW/retroarch/.retroarch/overlay folder and let me know if you want me to bundle yours in future revisions)
+- The hotkey button guide overlay can now be disabled in the overlay settings of RetroArch
+- Screenshots are now written to disk synchronously regardless of whether threaded rendering is enabled or not (this is required to ensure the auto savestate screenshots are written to disk in time before exiting RetroArch)
+- Enabled UHS card support for the TF2 card slot (we will see how that turns out)
+- Fixed a bug that caused D-pad axes to get stuck in a zero state
+- Set the GarlicOS version number to 1.3.9
+
 ## 30. March 2023:
 
 - Fixed a bug in the GL5203 SD/MMC driver that caused I/O micro stutters
