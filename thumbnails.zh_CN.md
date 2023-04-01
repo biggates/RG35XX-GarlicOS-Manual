@@ -89,7 +89,7 @@ TF2
 
 ### 其他配置
 
-在 TF1 的 `ROMS` 分区的 `/CFW/skin/settings.json` 文件中，做如下修改:
+在 TF1 的 `ROMS` 分区的 `/CFW/skin/settings.json` 文件中，做如下修改（注: 就是前两行）:
 
 ```
 "text-alignment": "left",

@@ -23,6 +23,23 @@ https://github.com/JoeStaff/devilutionX/releases
 * 没有自动存档功能
 * 建议使用 "++" 频率运行，并且还有一些卡顿现象
 
+## Jazz Jackrabbit port
+
+从 https://github.com/JoeStaff/openjazz/releases 下载
+
+把 GOG 版本中的游戏文件覆盖到 : `ROMS/PORTS/Jazz Jackrabbit/game/` 目录下
+
+操作：
+
+- 方向键 移动
+- B 跳
+- A 射击 / 进入
+- Y 更换武器
+- X 向上游泳
+- L1 暂停
+- R1 选项 / 后退
+- 音量键 控制音量
+
 ## 参考资料
 
 - https://www.rg35xx.com/en/
