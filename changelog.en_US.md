@@ -2,7 +2,24 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
-## 1. April 2023:
+## 1. April 2023 (1.4.0):
+
+- Fixed notifications inside the RetroArch menu
+- Fixed a page scrolling error in the Consoles menu
+- Removed GarlicOS CPU controls (see next point as to why)
+- Added RetroArch CPU controls (this allows us to do per-core and even per-game fine tuning of the CPU)
+- Cores without CPU control overrides will run at max CPU speed from now on (this way we can dial things in as we go without affecting user's gameplay experience in the process)
+- Removed the Game Mode controls from RetroArch (as RG35XX doesn't support Game Mode anyway)
+- Configured Gambatte to run at 504MHz (lowest we can go before we run into a scaler bottleneck)
+- Configured mGBA to run at 1.3GHz (lowest we can go before the Golden Sun battle animations start to lag)
+- Configured FCEUmm to run at 720MHz (lowest we can go before we run into a scaler bottleneck)
+- Configured Supafaust to run at 1.3GHz (lowest we can go before Super Mario RPG starts to lag)
+- Configured Supafaust to run its renderer in a separate thread (pretty much needed to even have a shot at SuperFX games)
+- The Select button now acts the same way as the Start button inside GarlicOS (for now)
+- The underclock / overclock graphics have been removed from the skin directory (as they will no longer be needed)
+- Set the GarlicOS version number to 1.4.0
+
+## 1. April 2023 (1.3.9):
 
 - The menu & volume up button no longer trigger L3 / R3 inside of auto-mapped RetroArch cores (this fixes unwanted double-mapping of these buttons in FCEUmm and can, for those that like to custom map things, be reverted by messing with the "RG35XX Gamepad" automapping file)
 - The hardware-accelerated overlay render code is now multithreaded, double-buffered and frame-limited (no more flickering notifications)
