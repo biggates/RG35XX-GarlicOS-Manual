@@ -2,6 +2,55 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 6. April 2023 (1.4.4):
+
+- Fixed a bug in the new input driver that caused excessive amounts of D-Pad hat release events to be emitted (this affected the GarlicOS menu in some very strange ways)
+- Fixed a bug that enabled games to override the main RetroArch config on exit
+- Patched the new u-boot DTB to bring back the 0% battery boot hack
+- Patched the kernel DTB battery percentage curve to return better estimates (based on data gathered from 4 separate 2600mAh and 3 separate 2100mAh battery drain tests, 2100mAh battery owners, please delete the kernel.dtb file and rename 2100mAh.dtb into kernel.dtb to show the proper battery percentage for your unit)
+- Updated the PCSX ReARMed core with D-Pad to Right Analog Stick mapping support (thanks to XQuader)
+- Tweaked the interactive governor target loads to better scale in the sub-1GHz range (less stutter, better performance & lower battery consumption)
+- Set the GarlicOS version number to 1.4.4
+
+## 5. April 2023 (1.4.3):
+
+- Made GDB logging optional as it interfered with some cores (ScummVM & mGBA most notably, you can enable it when needed by placing an empty enableGDB file in the misc partition now)
+- Updated u-boot to the latest retail version (this fixes the new 2600mAh sticker revision PCB getting stuck at the boot logo)
+- Patched the custom kernel to match the retail DTB property names (this fixes the new 2600mAh sticker revision PCB getting stuck at the boot logo)
+- The MicroSD card image version no longer installs u-boot updates on first boot (as the MicroSD card version always ships with the latest one anyway)
+- Fixed a bug in the RetroArch CPU control menu that prevented people from picking the performance governor
+- Fixed a bug in the RetroArch CPU control menu that caused battery drain
+- The RetroArch CPU min & max frequency are (for now) silently ignored in all governors except userspace (as changing them triggered a kernel bug which I'm still investigating)
+- Updated the interactive governor and set it as the new default (it seems to scale pretty well from what I've seen)
+- The previous CPU core overrides have been reverted as they are no longer needed (please manually wipe your CFW/retroarch/.retroarch/config folder before updating via CopyPaste)
+- Set the GarlicOS version number to 1.4.3
+
+## 4. April 2023 (1.4.2):
+
+- Fixed sleep & resume (I had to rewrite some of the sleep & resume logic to deal with a GDB quirk that froze the RetroArch process)
+- Fixed a crash that could occur when toggling threaded rendering on or off
+- Fixed an issue that broke overlays & notifications after toggling between normal and threaded rendering
+Set the GarlicOS version number to 1.4.2
+
+## 3. April 2023 (1.4.1):
+
+- Fixed the D-pad axis zero-point rollover bug
+- The overlay render thread now gets properly cleaned up on RetroArch exit
+- Fixed a bug that prevented users from disabling previously enabled RetroArch overlays
+- ZX Spectrum (fuse) now auto-trims black borders
+- Fixed a bug that caused non-functional windowed & full-screen options to appear in the RetroArch's video settings when using the mGBA core
+- Screenshot captures are now executed asynchronously where possible (this fixes savestate creation stutters, auto-savestate screenshots are still created synchronously to ensure timely writing to disk)
+- Fixed a bug in the GarlicOS menu code that got the CPU stuck at top-clock while idling
+- Fixed a bug in the GarlicOS menu code that lowered the menu frame rate
+- Fixed a power button bug in the GarlicOS menu that prevented shutdowns
+- Powering off now behaves identically in both the GarlicOS menu & RetroArch (tapping the power button is enough now)
+- Enabled GDB log output to make it easier for regular users to file bugreports (you can find it in CFW/retroarch/.retroarch/logs/gdb.log alongside retroarch.log)
+- Changed the way RetroArch config files are handled (the configs now get auto-merged into retroarch.cfg)
+- Fixed a governor related bug in the RetroArch CPU controls (this fixes the crashes when exiting games)
+- Added support for daemon autostart scripts (just place your daemon start scripts in CFW/autostart and they will execute on device boot)
+- The TF2 UHS-enabled kernel DTB has been made optional and moved to kernel-tf2uhs.dtb as some user's cards stopped working with it enabled (I on the other hand can't get my card working at all without enabling UHS... as such, I now provide both DTBs and users can choose whichever works best for their cards, just rename the one you want to use to kernel.dtb and reboot your unit to use it)
+- Set the GarlicOS version number to 1.4.1
+
 ## 1. April 2023 (1.4.0):
 
 - Fixed notifications inside the RetroArch menu
