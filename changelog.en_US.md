@@ -2,6 +2,24 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 11. April 2023 (1.4.6):
+
+- Sync events for skipped D-pad rollovers no longer fire (there's no need for them on straight jumps between -1 & 1 on the axis scale)
+- Hardware overlays now get disabled on frames where they aren't needed (which leaves more CPU cycles for actual emulation)
+- The overlay render thread now renders at 1FPS (which is plenty for notifications and saves CPU cycles)
+- The overlay render thread is now pinned to the fourth CPU core (which translates to free performance as RetroArch occupies mostly the first two CPU cores)
+- The overlay framebuffer has been moved to the end of the framebuffer device's memory (which saves us the CPU overhead of re-calculating the offset on every frame)
+- The PCSX ReARMed core has gotten a few performance improvements (which translate to 2~3 additional FPS)
+- The battery display in the Garlic menu now snaps to the closest percentage point image based on distance (for example, 81% actual capacity will now snap towards the 80% rather than the 100% image it previously did)
+- Set the GarlicOS version number to 1.4.6
+
+## 9. April 2023 (1.4.5):
+
+- Brought back the select button for CPU control (--, -, normal, +, ++), but instead of forcing a specific static clock it now sets the maximum CPU frequency instead (this allows for dynamic frequency scaling while also giving us the ability to disable >1GHz frequencies for silicon lottery losers like the recent screen fuzz sufferers)
+- Tweaked the interactive governor target loads further which should fix the reported stutter in ScummVM, DOS, NES, GBC and possibly other systems
+- Added DTBs for all currently known-to-fit battery sizes (make sure to pick the DTB that matches your battery size from the misc/dtbs directory, rename it to kernel.dtb and overwrite the one in the misc partition to get proper battery percentage reporting)
+- Set the GarlicOS version number to 1.4.5
+
 ## 6. April 2023 (1.4.4):
 
 - Fixed a bug in the new input driver that caused excessive amounts of D-Pad hat release events to be emitted (this affected the GarlicOS menu in some very strange ways)
