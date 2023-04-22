@@ -42,4 +42,4 @@ https://github.com/JoeStaff/devilutionX/releases
 
 ## 参考资料
 
-- https://www.rg35xx.com/en/
+- https://www.rg35xx.com/en/bios-roms/ports/

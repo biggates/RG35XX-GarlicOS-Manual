@@ -39,7 +39,6 @@ GarlicOS 的文件内容可以从 [Black-Seraph 的 Patreon 页面](https://www.
 
 ## 其他资源
 
-- [一些 RG35XX 资源下载 (百度网盘)](https://pan.baidu.com/s/1jHsoRIHnCFNSarL5DOmkJA?pwd=35xx)
 - [百度网盘链接 by 捌佰](https://pan.baidu.com/s/1SZW7v1PogrKP2ZC2GMif8A?pwd=dqd3)
 - [百度网盘链接 by 六六](https://pan.baidu.com/s/1kbVz_cNWY7TAAVHgfAzYZQ?pwd=0663)
 

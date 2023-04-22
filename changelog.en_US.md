@@ -2,6 +2,16 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 18. April 2023 (1.4.7):
+
+- Fixed a Garlic user interface glitch in the recent game menu that occured when exiting games while the FPS counter was enabled
+- Notifications are now generated via a producer / consumer queue (it makes them feel more fluid / faster)
+- Fixed a color conversion issue in the freechaf libretro core (thanks to XQuader)
+- Added the vice_xvic libretro core (thanks to Salvacam)
+- The 3500mAh DTB file was removed because the batteries used to generate the discharge-curve turned out to be mislabeled 2800mAh batteries (this is the fraudulent AliExpress listing in question)
+- The GarlicOS 1.3.4 mirror has been removed (most, if not all ports are now compatible with the latest GarlicOS builds)
+- Set the GarlicOS version to 1.4.7
+
 ## 11. April 2023 (1.4.6):
 
 - Sync events for skipped D-pad rollovers no longer fire (there's no need for them on straight jumps between -1 & 1 on the axis scale)
