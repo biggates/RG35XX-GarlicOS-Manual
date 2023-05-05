@@ -2,6 +2,22 @@
 
 原帖地址在 https://www.patreon.com/posts/76561333 。
 
+
+## 2023-04-30 (1.4.9):
+
+- 加入了 `NESTOPIA`, `PCFX`, `PLUS4`, `C128` 和 `PET` 的图标
+- GarlicOS 版本号升级为 `1.4.9`
+
+## 2023-04-30 (1.4.8):
+
+- 更新了 `FCEUmm` 核心 ("FC" 文件夹)
+- 修正了 `Mednafen PCFX` 核心 ("PCFX" 文件夹, 感谢 XQuader)
+- 加入了 `Nestopia` 核心 ("NESTOPIA" 文件夹, -||-)
+- 加入了 `ViceXPlus4` 核心 ("PLUS4" 文件夹, -||-)
+- 加入了 `ViceX128` 核心 ("C128" 文件夹, -||-)
+- 加入了 `ViceXPet` 核心 ("PET" 文件夹, -||-)
+- GarlicOS 版本号升级为 `1.4.8`
+
 ## 2023-04-18 (1.4.7):
 
 - 修正了当显示 FPS 时退出游戏时在 GarlicOS 最近游戏界面的卡顿问题

@@ -2,6 +2,21 @@
 
 Original information from https://www.patreon.com/posts/76561333
 
+## 30. April 2023 (1.4.9):
+
+- Added system icons for NESTOPIA, PCFX, PLUS4, C128 & PET folders
+- Set the GarlicOS version to 1.4.9
+
+## 30. April 2023 (1.4.8):
+
+- Updated the FCEUmm libretro core ("FC" folder)
+- Fixed the Mednafen PCFX core ("PCFX" folder, thanks to XQuader)
+- Added the Nestopia core ("NESTOPIA" folder, -||-)
+- Added the ViceXPlus4 core ("PLUS4" folder, -||-)
+- Added the ViceX128 core ("C128" folder, -||-)
+- Added the ViceXPet core ("PET" folder, -||-)
+- Set the GarlicOS version to 1.4.8
+
 ## 18. April 2023 (1.4.7):
 
 - Fixed a Garlic user interface glitch in the recent game menu that occured when exiting games while the FPS counter was enabled
